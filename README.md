@@ -1,0 +1,1 @@
+This is a Python terminal BlackJack game built as part of the technical assessment for the position of Graduate Software Engineer for the BBC.
