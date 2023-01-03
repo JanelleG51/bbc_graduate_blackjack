@@ -1,8 +1,8 @@
 class Card:
-    def __init__(self, suit, value):
+    def __init__(self, suit, face):
         self.suit = suit
-        self.value = value
+        self.face = face
     
     def __str__(self):
-        return self.value + ' of ' + self.suit
+        return self.face + ' of ' + self.suit
 
