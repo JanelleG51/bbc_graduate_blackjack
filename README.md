@@ -25,13 +25,14 @@ Scenario | Expected Behaviour | Actual Behaviour | Pass |
 Test Case| Failing Condition | Passing Condition | Pass |
 ------- | ----------| ---------------------------- | ---------------------------|
  | TC1: Create a deck of cards with 52 card | Run test without cards | Create Card class and import to Deck class to loop through cards | Yes
- | TC2: When a player ‘hits’ then they receive another card and their score is updated |||
- | TC3: When a player ‘stands’ they receive no further cards and their score is evaluated |||
- | TC4:When a players score is 21 or less then they have a valid hand |||
- | TC5: When a players hand is 22 or more then they are ‘bust’ and do not have a valid hand |||
- | TC6: If a player has a king and an ace, then they score 21 |||
- |TC7: If a player has a king, a queen, and an ace, then they score 21 |||
- | TC8: If a player has a nine, an ace, and another ace, then they score 21 |||
+ | TC2: When the game starts, the player is dealt two cards | | |
+ | TC3: When a player ‘hits’ then they receive another card and their score is updated |||
+ | TC4: When a player ‘stands’ they receive no further cards and their score is evaluated |||
+ | TC5:When a players score is 21 or less then they have a valid hand |||
+ | TC6: When a players hand is 22 or more then they are ‘bust’ and do not have a valid hand |||
+ | TC7: If a player has a king and an ace, then they score 21 |||
+ |TC8: If a player has a king, a queen, and an ace, then they score 21 |||
+ | TC9: If a player has a nine, an ace, and another ace, then they score 21 |||
 
 
  ## Assumptions 
