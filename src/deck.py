@@ -1,3 +1,4 @@
+import random
 from src.card import *
 
 class Deck:
@@ -19,6 +20,13 @@ class Deck:
         for card in self.deck:
             deck_build += '\n'+card.__str__() 
         return 'The deck has:' + deck_build
+
+    def shuffle(self):
+        random.shuffle(self.deck)
+
+    def deal(self):
+        deal_one_card = self.deck.pop()
+        return deal_one_card
 
     
 
