@@ -8,3 +8,5 @@ class Hand:
     def deal_card(self, card):
         self.cards.append(card)
         self.value +=values[card.face]
+
+

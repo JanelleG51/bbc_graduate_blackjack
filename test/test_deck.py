@@ -7,7 +7,6 @@ class DeckTestCase(unittest.TestCase):
 
     def setUp(self):  # this method will be run before each test
         self.deck = Deck()
-        self.hand = Hand()
 
     def tearDown(self):  # this method will be run after each tests
         pass
@@ -17,8 +16,11 @@ class DeckTestCase(unittest.TestCase):
         self.assertEqual(number_of_cards, 52)
 
     def test_player_dealt_two_cards(self):
-        player_dealt_two_cards = len(self.hand.cards)
-        self.assertEqual(player_dealt_two_cards, 2)
+        player_hand = Hand()
+        player_hand.deal_card(self.deck.deal())
+        player_hand.deal_card(self.deck.deal())
+        self.assertEqual(len(player_hand.cards), 2)
+
 
 
 if __name__ == '__main__':

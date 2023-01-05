@@ -5,7 +5,14 @@ from src.hand import Hand
 
 
 def play():
-    print('Hello, potential future BBC developer!')  # execution starts here! delete this line and add your game code.
+    print('Welcome to BlackJack!')  
+    
+    deck = Deck()
+    deck.shuffle()
+
+    player_hand = Hand()
+    player_hand.deal_card(deck.deal())
+    player_hand.deal_card(deck.deal())
 
 
 if __name__ == '__main__':

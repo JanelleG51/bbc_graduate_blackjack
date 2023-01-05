@@ -27,13 +27,13 @@ class Deck:
         """
         Shuffles the deck of 52 cards using the built in random function.
         """
-        random.shuffle(self.deck)
+        random.shuffle(self.cards)
 
     def deal(self):
         """
         When the deal function is called, one card is removed from the deck using the pop function ready to be added to the empty cards list stored in the Hand class.
         """
-        deal_one_card = self.deck.pop()
+        deal_one_card = self.cards.pop()
         return deal_one_card
 
     
