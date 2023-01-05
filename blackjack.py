@@ -2,6 +2,7 @@ import random
 from src.deck import Deck
 from src.card import *
 from src.hand import Hand
+from src.game_functions import *
 
 
 def play():
