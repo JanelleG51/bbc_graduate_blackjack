@@ -2,7 +2,6 @@ import unittest
 from src.deck import Deck
 
 
-
 class DeckTestCase(unittest.TestCase):
 
     def setUp(self):  # this method will be run before each test
