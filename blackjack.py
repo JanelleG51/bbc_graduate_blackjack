@@ -4,8 +4,8 @@ from src.card import *
 from src.hand import Hand
 from src.game_functions import *
 
-
 def play():
+
     print('Welcome to BlackJack!')  
     
     deck = Deck()
@@ -16,6 +16,12 @@ def play():
     player_hand.deal_card(deck.deal())
 
     show_hand(player_hand)
+
+    hit_or_stand(deck, player_hand)
+
+    if player_hand.value > 21:
+        print("Player busts!")
+        
 
 
 if __name__ == '__main__':
