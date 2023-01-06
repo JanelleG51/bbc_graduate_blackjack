@@ -15,6 +15,8 @@ def play():
     player_hand.deal_card(deck.deal())
     player_hand.deal_card(deck.deal())
 
+    show_hand(player_hand)
+
 
 if __name__ == '__main__':
     play()
