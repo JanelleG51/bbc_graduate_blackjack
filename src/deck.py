@@ -21,7 +21,7 @@ class Deck:
         deck_build = ''
         for card in self.deck:
             deck_build += '\n'+card.__str__() 
-        return 'The deck has:' + deck_build
+        return  deck_build
 
     def shuffle(self):
         """
