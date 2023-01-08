@@ -4,6 +4,16 @@
 
 This is a Python terminal BlackJack game built as part of the technical assessment for consideration to the position of Graduate Software Engineer Scheme with the BBC.
 
+## Assumptions 
+
+- This is a single player terminal game that deals only one hand.
+- The aim of the player is to get a hand of 21.
+- If the player achieves 21, the player wins and the game ends.
+- If the player stands, the game ends.
+- If the player scores over 21, the player is bust and the game ends.
+- As the developer has taken a class-based, object oriented approach, multiple additional cards, decks, and player hands can be added.
+- To run this game, fork or clone the existing repository and run `python3 blackjack.py` in the terminal.
+
 ## Scenarios to be met / User Stories
 
 Scenario | Expected Behaviour | Actual Behaviour | Manual Test Pass |
@@ -34,17 +44,16 @@ Test Case| Failing Condition | Passing Condition | Pass |
  |TC8: If a player has a king, a queen, and an ace, then they score 21 |||
  | TC9: If a player has a nine, an ace, and another ace, then they score 21 |||
 
+## Environment
 
- ## Assumptions 
+The developer used **VS Code** as the IDE and created a virtual environment. The below assumes that you have both VS Code and Git installed.
 
- ## Environment
-
- IDE VSCode 
-- Install Python and create a Python file  
-- Virtual environment   
-- Python -m venv Env name
-- Env name/Scripts/Activate.bat
-- Command palette – select python interpreter – if it doesn’t show, go to folder, scripts then select python 
+- Install Python
+- Open a workspace and create python file   
+- Create a virtual environment   
+- `python -m venv <env name>`
+- `<env name>/Scripts/Activate.bat`
+- Go to `Command palette` – select python interpreter – if it doesn’t show, go to folder, scripts then select python. 
 
 
  
