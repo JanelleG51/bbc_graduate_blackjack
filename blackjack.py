@@ -22,6 +22,9 @@ def play():
 
     if player_hand.value > 21:
         print("Player busts!")
+    
+    if player_hand.value == 21:
+        print("BlackJack!! Player wins.")
 
 
 if __name__ == '__main__':
