@@ -27,4 +27,9 @@ class Hand:
             self.value -= 10
             self.aces -= 1
 
+    def hand_not_bust(self):
+        if self.value > 21:
+            return False  
+        return True
+
             

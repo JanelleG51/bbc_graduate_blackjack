@@ -32,14 +32,21 @@ class DeckTestCase(unittest.TestCase):
         self.hand.deal_card(self.deck.deal())
         self.assertTrue(self.hand.deal_card, 1)
 
-    def test_validity_of_hand(self):
+    def test_value_of_hand(self):
         """ Is the value of the added cards correct to ensure the hand is valid or invalid? """
         self.hand.deal_card(Card("Spades", "Two"))
         self.hand.deal_card(Card("Hearts", "Five"))
         self.assertEqual(self.hand.value, 7)
+
         """ Does the value of the hand update when a new card is introduced?"""
         self.hand.deal_card(Card("Clubs", "Eight"))
         self.assertEqual(self.hand.value, 15)
+
+    def test_validity_of_hand(self):
+        self.hand.deal_card((Card)("Spades", "Eight"))
+        self.hand.deal_card((Card)("Hearts", "Nine"))
+        self.hand.deal_card((Card)("Diamonds", "Ten"))
+        self.assertFalse(self.hand.hand_not_bust())
 
     def test_for_score_of_21_with_king_and_ace(self):
         """ Does the Ace remain at 11 when dealt with a card value of 10?"""

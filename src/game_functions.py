@@ -42,5 +42,4 @@ def hit_or_stand(deck, hand):
         break
 
 
-
         
