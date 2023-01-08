@@ -48,6 +48,9 @@ Test Case| Failing Condition | Passing Condition | Pass |
  |TC7: If a player has a king, a queen, and an ace, then they score 21 | Set assertequal hand value to 21 and deal a king, a queen and an ace.| Include aces_high_low function to adjust aces value and run test again.| Yes
  | TC8: If a player has a nine, an ace, and another ace, then they score 21 | Set assertequal hand value to 21 and deal two aces and a nine.| Include aces_high_low function to adjust aces value and run test again | Yes
 
+## Known Issues
+- While the player's hand is not dealt further cards on 'Stand' and their score remains unchanged, the game does not break and player's are still presented with the option to 'hit' or 'stand'. To break out of terminal game use `Ctrl C`
+
 ## Environment
 
 The developer used **VS Code** as the IDE and created a virtual environment. The below assumes that you have both VS Code and Git installed.
