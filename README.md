@@ -41,13 +41,12 @@ Test Case| Failing Condition | Passing Condition | Pass |
 ------- | ----------| ---------------------------- | ---------------------------|
  | TC1: Create a deck of cards with 52 card | Run test without cards and incorrect number of cards | Create Card class and import to Deck class to loop through cards to return 52 cards | Yes
  | TC2: When the game starts, the player is dealt two cards | Run test with only one card in the player_hand while asserting the total lenght should be two. | Deal another card to the player_hand and run test again. | Yes
- | TC3: When a player ‘hits’ then they receive another card and their score is updated |||
- | TC4: When a player ‘stands’ they receive no further cards and their score is evaluated |||
- | TC5:When a players score is 21 or less then they have a valid hand |||
- | TC6: When a players hand is 22 or more then they are ‘bust’ and do not have a valid hand |||
- | TC7: If a player has a king and an ace, then they score 21 | Set assertequal hand value to 21 and deal two cards that represent a score greater or lesser than 21. | Deal a King and and Ace and run test again.  | Yes
- |TC8: If a player has a king, a queen, and an ace, then they score 21 | Set assertequal hand value to 21 and deal a king, a queen and an ace.| Include aces_high_low function to adjust aces value and run test again.| Yes
- | TC9: If a player has a nine, an ace, and another ace, then they score 21 | Set assertequal hand value to 21 and deal two aces and a nine.| Include aces_high_low function to adjust aces value and run test again | Yes
+ | TC3: When a player ‘hits’ then they receive another card and their score is updated |   | The developer has tested that on hit one card is dealt using assertTrue but questions the validity of the test. | Yes but the developer feels it may need further work.
+ | TC4: When a player ‘stands’ they receive no further cards and their score is evaluated | The developer was unable to run this test|| No
+ | TC5:When a players score is 21 or less then they have a valid hand if they are over 21 they do not have a valid hand. | A player's hand is only valid if the values are correct. Adjust value of cards in card.py to reflect incorrect values i.e. change value of "two" to 5 and run test.  | Assess validity by adding correct card values to ensure calculations are correct and correctly updated when introducing a new card. | Yes
+ | TC6: If a player has a king and an ace, then they score 21 | Set assertequal hand value to 21 and deal two cards that represent a score greater or lesser than 21. | Deal a King and and Ace and run test again.  | Yes
+ |TC7: If a player has a king, a queen, and an ace, then they score 21 | Set assertequal hand value to 21 and deal a king, a queen and an ace.| Include aces_high_low function to adjust aces value and run test again.| Yes
+ | TC8: If a player has a nine, an ace, and another ace, then they score 21 | Set assertequal hand value to 21 and deal two aces and a nine.| Include aces_high_low function to adjust aces value and run test again | Yes
 
 ## Environment
 
