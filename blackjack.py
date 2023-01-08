@@ -24,8 +24,8 @@ def play():
         print("Player busts!")
     
     if player_hand.value == 21:
-        print("BlackJack!! Player wins.")
-
+        print("BlackJack! You win!!")
+       
 
 if __name__ == '__main__':
     play()

@@ -27,8 +27,13 @@ def hit_or_stand(deck, hand):
 
         elif x[0].lower() == 's':
             print("Player stands. Player's hand = ", hand.value)
-            break
+            playing = False
+        
         else:
             print("Sorry, please try again.")
             continue
         break
+
+
+
+        
