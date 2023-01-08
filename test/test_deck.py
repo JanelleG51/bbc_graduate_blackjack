@@ -14,7 +14,7 @@ class DeckTestCase(unittest.TestCase):
     def tearDown(self):  # this method will be run after each tests
         pass
 
-    # any method beginning with 'test' will be run by unittest
+# any method beginning with 'test' will be run by unittest
     def test_number_of_cards(self):
         """ Does the deck have 52 cards? """
         number_of_cards = len(self.deck.cards)
@@ -32,9 +32,14 @@ class DeckTestCase(unittest.TestCase):
         self.hand.deal_card(self.deck.deal())
         self.assertTrue(self.hand.deal_card, 1)
 
-    
-    #def test_assess_validity_of_hand(self):
-       
+    def test_validity_of_hand(self):
+        """ Is the value of the added cards correct to ensure the hand is valid or invalid? """
+        self.hand.deal_card(Card("Spades", "Two"))
+        self.hand.deal_card(Card("Hearts", "Five"))
+        self.assertEqual(self.hand.value, 7)
+        """ Does the value of the hand update when a new card is introduced?"""
+        self.hand.deal_card(Card("Clubs", "Eight"))
+        self.assertEqual(self.hand.value, 15)
 
     def test_for_score_of_21_with_king_and_ace(self):
         """ Does the Ace remain at 11 when dealt with a card value of 10?"""
@@ -57,7 +62,6 @@ class DeckTestCase(unittest.TestCase):
         self.hand.deal_card(Card("Hearts", "Ace"))
         self.hand.aces_high_low()
         self.assertEqual(self.hand.value, 21)
-
 
 
 if __name__ == '__main__':
