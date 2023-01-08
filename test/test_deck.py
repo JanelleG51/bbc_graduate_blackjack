@@ -32,37 +32,31 @@ class DeckTestCase(unittest.TestCase):
         self.hand.deal_card(self.deck.deal())
         self.assertTrue(self.hand.deal_card, 1)
 
+    
+    #def test_assess_validity_of_hand(self):
+       
+
     def test_for_score_of_21_with_king_and_ace(self):
-        card_one = Card("Hearts", "King")
-        card_two = Card("Diamonds", "Ace")
-        self.hand.deal_card(card_one)
-        self.hand.deal_card(card_two)
+        """ Does the Ace remain at 11 when dealt with a card value of 10?"""
+        self.hand.deal_card(Card("Hearts", "King"))
+        self.hand.deal_card(Card("Diamonds", "Ace"))
         self.assertEqual(self.hand.value, 21)
 
     def test_for_score_of_21_with_king_queen_ace(self):
-        card_one = Card("Hearts", "King")
-        card_two = Card("Diamonds", "Ace")
-        card_three = Card("Spades", "Queen")
-        self.hand.deal_card(card_one)
-        self.hand.deal_card(card_two)
-        self.hand.deal_card(card_three)
+        """ Does the Ace adjust to a 1 when dealt with two cards with a value of 20? """
+        self.hand.deal_card(Card("Hearts", "King"))
+        self.hand.deal_card(Card("Diamonds", "Ace"))
+        self.hand.deal_card(Card("Spades", "Queen"))
         self.hand.aces_high_low()
         self.assertEqual(self.hand.value, 21)
 
     def test_two_aces_and_nine_score_21(self):
-        card_one = Card("Hearts", "Ace")
-        card_two = Card("Diamonds", "Ace")
-        card_three = Card("Spades", "Nine")
-        self.hand.deal_card(card_one)
-        self.hand.deal_card(card_two)
-        self.hand.deal_card(card_three)
+        """ Does one Ace adjust to 1 when two aces and a nine are in hand? """
+        self.hand.deal_card(Card("Spades", "Nine"))
+        self.hand.deal_card(Card("Diamonds", "Ace"))
+        self.hand.deal_card(Card("Hearts", "Ace"))
         self.hand.aces_high_low()
         self.assertEqual(self.hand.value, 21)
-
-
-
-
-    
 
 
 
